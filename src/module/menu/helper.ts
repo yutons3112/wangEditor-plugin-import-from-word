@@ -60,7 +60,33 @@ export async function importFromWords(editor: IDomEditor, files: FileList | null
     reader.readAsArrayBuffer(file)
     reader.onload = e=>{
       if (reader.result instanceof ArrayBuffer){
-        mammoth.convertToHtml({arrayBuffer: reader.result}).then(r=>{
+        let options = {
+          // TODO
+          // css格式化
+          // https://mp.weixin.qq.com/s/kVbbPm3pVuH3ZZZ7saETBw
+          // 图片处理
+          // https://www.zhihu.com/question/605777855/answer/3384486501
+          convertImage:mammoth.images.imgElement(function (image){
+            return image.read("base64").then(async function (imageBuffer) {
+              // base64转blob
+              const contentType = image.contentType
+              const imageFile = base64ToFile(imageBuffer, contentType)
+              // 上传
+              let imageUrl = ''
+              if (customUpload) {
+                // 自定义上传
+                imageUrl = await customUpload(imageFile)
+              } else {
+                // 默认上传，使用axios实现
+                imageUrl = await uploadFile(editor, imageFile)
+              }
+              return {
+                src: imageUrl
+              };
+            });
+          })
+        }
+        mammoth.convertToHtml({arrayBuffer: reader.result},options).then(r=>{
           editor.setHtml(r.value)
         })
       }
