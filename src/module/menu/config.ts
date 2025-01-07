@@ -3,7 +3,7 @@
  * @author yutons
  */
 
-import { IUploadConfig } from '@wangeditor/editor'
+import { IUploadConfig } from '@wangeditor-next/editor'
 
 // 在通用 uploadConfig 上，扩展 ImportFromWord 相关配置
 export type IUploadConfigForImportFromWord = IUploadConfig & {

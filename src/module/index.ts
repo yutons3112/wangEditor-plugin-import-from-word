@@ -5,7 +5,7 @@
 
 import './local' // 多语言
 
-import { IModuleConf } from '@wangeditor/editor'
+import { IModuleConf } from '@wangeditor-next/editor'
 import withWord from './plugin'
 import { importFromWordMenuConf } from './menu/index'
 

@@ -24,12 +24,12 @@ yarn add wang-editor-plugin-import-from-word
 
 ## 使用
 
-【注意】该文档要求 `@wangeditor/editor` 版本 `>=5.1.16`
+【注意】该文档要求 `@wangeditor-next/editor` 版本 `>=5.6.26`
 
 ### 注册到编辑器
 
 ```js
-import { Boot } from '@wangeditor/editor'
+import { Boot } from '@wangeditor-next/editor'
 import wordModule from 'wang-editor-plugin-import-from-word'
 
 // 注册。要在创建编辑器之前注册，且只能注册一次，不可重复注册。
@@ -42,7 +42,7 @@ Boot.registerModule(wordModule)
 
 ```ts
 // ts
-import { IEditorConfig } from '@wangeditor/editor'
+import { IEditorConfig } from '@wangeditor-next/editor'
 // ts
 const editorConfig: Partial<IEditorConfig> = {
 // js
@@ -95,7 +95,7 @@ const editorConfig: Partial<IEditorConfig> = {
 
 ```ts
 // ts
-import { IToolbarConfig } from '@wangeditor/editor'
+import { IToolbarConfig } from '@wangeditor-next/editor'
 
 // ts
 const toolbarConfig: Partial<IToolbarConfig> = {

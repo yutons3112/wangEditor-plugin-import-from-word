@@ -3,7 +3,7 @@
  * @author yutons
  */
 
-import {IDomEditor} from '@wangeditor/editor'
+import {IDomEditor} from '@wangeditor-next/editor'
 import {IUploadConfigForImportFromWord} from './config'
 import mammoth from "mammoth";
 

@@ -3,7 +3,7 @@
  * @author yutons
  */
 
-import { DomEditor, IDomEditor } from '@wangeditor/editor'
+import { DomEditor, IDomEditor } from '@wangeditor-next/editor'
 
 function withWord<T extends IDomEditor>(editor: T) {
   const { isInline, isVoid } = editor

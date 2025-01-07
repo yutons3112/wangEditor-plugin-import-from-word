@@ -7,7 +7,7 @@ import {
   createEditor,
   createToolbar,
   Boot,
-} from '@wangeditor/editor'
+} from '@wangeditor-next/editor'
 import module, { ImportFromWord } from '../src/index'
 
 Boot.registerModule(module)
