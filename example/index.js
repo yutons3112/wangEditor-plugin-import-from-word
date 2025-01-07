@@ -7,15 +7,13 @@ import {
   createEditor,
   createToolbar,
   Boot,
-  IEditorConfig,
-  i18nChangeLanguage,
 } from '@wangeditor/editor'
 import module, { ImportFromWord } from '../src/index'
 
 Boot.registerModule(module)
 
 // 编辑器配置
-const editorConfig: Partial<IEditorConfig> = {
+const editorConfig = {
   onChange(editor) {
     const html = editor.getHtml()
     // @ts-ignore
