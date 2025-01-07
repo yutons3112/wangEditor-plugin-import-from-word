@@ -1,6 +1,6 @@
 {
-  "name": "wang-editor-plugin-import-from-word",
-  "version": "0.0.2",
+  "name": "wang-editor-next-plugin-import-from-word",
+  "version": "0.0.3",
   "description": "wangEditor 从Word导入",
   "repository": {
     "type": "git",

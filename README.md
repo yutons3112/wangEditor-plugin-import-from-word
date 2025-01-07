@@ -10,7 +10,7 @@
 
 ### 20250107
 
-更新至V0.0.2
+更新至v0.0.3
 
 1. 新增支持从Word文档导入（仅支持从docx文档导入）
 2. 解决文档导入后图片自动上传问题
@@ -19,7 +19,7 @@
 ## 安装
 
 ```shell
-yarn add wang-editor-plugin-import-from-word
+yarn add wang-editor-next-plugin-import-from-word
 ```
 
 ## 使用
