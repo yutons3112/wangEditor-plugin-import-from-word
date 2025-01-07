@@ -73,12 +73,16 @@ export async function importFromWords(editor: IDomEditor, files: FileList | null
               const imageFile = base64ToFile(imageBuffer, contentType)
               // 上传
               let imageUrl = ''
-              if (customUpload) {
-                // 自定义上传
-                imageUrl = await customUpload(imageFile)
-              } else {
-                // 默认上传，使用axios实现
-                imageUrl = await uploadFile(editor, imageFile)
+              try {
+                if (customUpload) {
+                  // 自定义上传
+                  imageUrl = await customUpload(imageFile)
+                } else {
+                  // 默认上传，使用axios实现
+                  imageUrl = await uploadFile(editor, imageFile)
+                }
+              } catch (e) {
+                imageUrl = "data:" + image.contentType + ";base64," + imageBuffer
               }
               return {
                 src: imageUrl
