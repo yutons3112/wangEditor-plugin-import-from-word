@@ -32,12 +32,12 @@ module.exports = merge(webpackCommonConf, {
     },
   },
   externals: {
-    // 这里的 value 需要跟 @wangeditor-next/editor 定义的 umd name 对应上，否则在 windows 就会找不到对应的对象
+    // 这里的 value 需要跟 @wangeditor/editor 定义的 umd name 对应上，否则在 windows 就会找不到对应的对象
     // 具体值参考如下链接 https://github.com/wangeditor-team/wangEditor-v5/blob/main/packages/editor/rollup.config.js
-    '@wangeditor-next/editor': {
-      commonjs: '@wangeditor-next/editor',
-      commonjs2: '@wangeditor-next/editor',
-      amd: '@wangeditor-next/editor',
+    '@wangeditor/editor': {
+      commonjs: '@wangeditor/editor',
+      commonjs2: '@wangeditor/editor',
+      amd: '@wangeditor/editor',
       root: 'wangEditor',
     },
   },

@@ -3,7 +3,7 @@
  * @author yutons
  */
 
-import { i18nAddResources } from '@wangeditor-next/editor'
+import { i18nAddResources } from '@wangeditor/editor'
 
 i18nAddResources('en', {
   word: {
